@@ -1,7 +1,9 @@
 #include <stdio.h>
 
 /**
- * main - prints "Programming is like building a multilingual puzzle
+ * main - Puts string and trailing newline to stdout
+ *
+ * Return: "Programming is like building a multilingual puzzle
  */
 int main(void)
 {
