@@ -1,8 +1,8 @@
 #include <stdio.h>
 
 /**
- * main -
- * Return:
+ * main - loops through variables n and m, printing 0-9
+ * Return: 00-99 separated by commas
  */
 int main(void)
 {
@@ -19,14 +19,19 @@ int main(void)
 			putchar(c);
 			d = m + '0';
 			putchar(d);
-			putchar(',');
-			putchar(' ');
+			if (n == 9 && m == 9)
+			{
+				putchar('\n');
+			}
+			else
+			{
+				putchar(',');
+				putchar(' ');
+			}
 			m++;
 		}
 		m = 0;
-       		n++;
+		n++;
 	}
-	putchar('\n');
-
 	return (0);
 }
