@@ -12,18 +12,16 @@ int main(void)
 
 	while (n <= 9)
 	{
+		c = n + '0';
+		putchar(c);
 		if (n < 9)
 		{
-			c = n + '0';
-			putchar(c);
 			putchar(',');
 			putchar(' ');
 			n++;
 		}
 		else
 		{
-			c = n + '0';
-			putchar(c);
 			n++;
 		}
 	}
