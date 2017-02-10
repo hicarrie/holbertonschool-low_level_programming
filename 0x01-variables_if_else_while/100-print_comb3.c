@@ -2,7 +2,7 @@
 
 /**
  * main - loops through variables n and m, printing 0-9
- * Return: 00-99 separated by commas
+ * Return: all possible different combinations of two digits
  */
 int main(void)
 {

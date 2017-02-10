@@ -1,8 +1,8 @@
 #include <stdio.h>
 
 /**
- * main - loops through variables n and m, printing 0-9
- * Return: 00-99 separated by commas
+ * main - loops through variables n, m, o, printing 0-9
+ * Return: all possible combinations of three digits
  */
 int main(void)
 {
