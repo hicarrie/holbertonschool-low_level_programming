@@ -10,13 +10,22 @@ int main(void)
 	int n = 0;
 	int c;
 
-	while (n < 10)
+	while (n <= 9)
 	{
-		c = n + '0';
-		putchar(c);
-		putchar(',');
-		putchar(' ');
-		n++;
+		if (n < 9)
+		{
+			c = n + '0';
+			putchar(c);
+			putchar(',');
+			putchar(' ');
+			n++;
+		}
+		else
+		{
+			c = n + '0';
+			putchar(c);
+			n++;
+		}
 	}
 	putchar('\n');
 
