@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * main - prints Holberton followed by new line
+ * main - print Holberton followed by newline
  * Return: 0
  */
 int main(void)
@@ -16,5 +16,6 @@ int main(void)
 	_putchar('o');
 	_putchar('n');
 	_putchar('\n');
+
 	return (0);
 }
