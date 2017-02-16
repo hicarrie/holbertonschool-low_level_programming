@@ -12,7 +12,7 @@ int main(void)
 	unsigned long int j = 1;
 	unsigned long int sum = 0;
 
-	for (x = 0; x <= 4000 ; x++)
+	for (x = 0; x <= 4000000 ; x++)
 	{
 		k = i + j;
 		i = j;
