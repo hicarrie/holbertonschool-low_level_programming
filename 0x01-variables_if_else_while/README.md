@@ -21,3 +21,9 @@ A program that prints all the numbers of base 16, in lowercase, followed by a ne
 A program that prints all possible combinations of single-digit numbers
 ### 10. 00...99
 A program that prints numbers from 0 to 99
+### 11. Inventing is a combination of brains and materials. The more brains you use, the less material you need
+A program that prints all possible different combinations of two digits
+### 12. The success combination in business is: Do what you do better... and: do more of what you do...
+A program that prints all possible different combinations of three digits
+### 13. Software is eating the World
+A program that prints all possible combinations of two two-digit numbers

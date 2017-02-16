@@ -23,3 +23,11 @@ A function that prints the 9 times table, starting with 0
 A function that adds two integer and returns the result
 ### 11. Holberton School, 98 Battery Street, San Francisco CA 94111
 A function that prints all natural numbers from n to 98, followed by a new line
+### 12. The World looks like a multiplication-table, or a mathematical equation, which, turn it how you will, balances itself
+A function that prints the n times table, starting with 0
+### 13. Nature made the natural numbers; All else is the work of women
+A program that computes and prints the sum of all the multiples of 3 or 5 below 1024 (excluded), followed by a new line
+### 14. In computer class, the first assignment was to write a program to print the first 100 Fibonacci numbers. Instead, I wrote a program that would steal passwords of students. My teacher gave me an A
+A program that prints the first 50 Fibonacci numbers, starting with 1 and 2, followed by a new line
+### 15. Even Liber Abbaci
+A program that finds and prints the sum of the even-valued terms, followed by a new line
