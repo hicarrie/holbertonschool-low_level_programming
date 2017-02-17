@@ -7,18 +7,16 @@
 int main(void)
 {
         unsigned long int a = 612852475143;
-        unsigned long int b = 2;
-	unsigned long int c;
+	unsigned long int b = 2;
 
-        while (b < a / 2)
+	while (b < a / 2)
 	{
-	        if (a % b == 0)
+		if (a % b == 0)
 		{
 			a = a / b;
-			c = b;
 		}
 		b++;
 	}
-	printf("%ld\n", c);
+	printf("%lu\n", a);
 	return (0);
 }
