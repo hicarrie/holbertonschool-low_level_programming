@@ -6,7 +6,7 @@
  */
 int main(void)
 {
-        unsigned long int a = 612852475143;
+	unsigned long int a = 612852475143;
 	unsigned long int b = 2;
 
 	while (b < a / 2)
