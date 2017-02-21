@@ -29,14 +29,14 @@ void puts_half(char *str)
 
 /**
  * _strlen - returns the length of a string
- * @s: string to be evaluated
+ * @str: string to be evaluated
  * Return: length of string
  */
-int _strlen(char *s)
+int _strlen(char *str)
 {
 	int i = 0;
 
-	while (s[i] != '\0')
+	while (str[i] != '\0')
 	{
 		i++;
 	}
