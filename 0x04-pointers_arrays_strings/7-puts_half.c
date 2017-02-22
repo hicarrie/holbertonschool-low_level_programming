@@ -7,23 +7,33 @@
  */
 void puts_half(char *str)
 {
-	int i;
-	int j;
+	int i, k;
+	int j = _strlen(str);
+
+	if (j % 2 == 0)
+		k = j / 2;
+	else
+		k = (j - 1) / 2;
+
+	for (i = k; i <= j; i++)
+		_putchar(str[i]);
+
+	_putchar('\n');
+}
+
+/**
+ * _strlen - returns the length of a string
+ * @str: string to be evaluated
+ * Return: length of string
+ */
+int _strlen(char *str)
+{
+	int i = 0;
 
 	while (str[i] != '\0')
 	{
 		i++;
 	}
 
-	if (i % 2 == 0)
-		j = i / 2;
-	else
-		j = (i - 1) / 2;
-
-	while (j < i)
-	{
-		_putchar(str[j]);
-		j++;
-	}
-	_putchar('\n');
+	return (i);
 }
