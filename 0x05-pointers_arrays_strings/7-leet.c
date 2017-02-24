@@ -8,15 +8,14 @@
 char *leet(char *s)
 {
 	int i, j;
-	char low[] = {'a', 'e', 'o', 't', 'l'};
-	char up[] = {'A', 'E', 'O', 'T', 'L'};
-	char n[] = {'4', '3', '0', '7', '1'};
+	char a[] = "aeotlAEOTL";
+	char n[] = "4307143071";
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
-		for (j = 0; j < 5; j++)
+		for (j = 0; j <= 10; j++)
 		{
-			if (s[i] == low[j] || s[i] == up[j])
+			if (s[i] == a[j])
 				s[i] = n[j];
 		}
 	}
