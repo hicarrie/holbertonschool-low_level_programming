@@ -12,7 +12,7 @@ void print_number(int n)
 	int dig;
 	int exp = 1;
 
-        n = n / 10;
+	n = n / 10;
 	num = n;
 
 	if (last < 0)
