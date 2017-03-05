@@ -11,7 +11,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int i = 1;
+	int i;
 	int sum = 0;
 
 	if (argc == 1)
@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
 		return (0);
 	}
 
-	while (i < argc)
+        for (i = 1; i < argc; i++)
 	{
 		if (_isnum(argv[i]) == 0)
 		{
@@ -30,7 +30,6 @@ int main(int argc, char *argv[])
 		if (_isnum(argv[i]) == 1)
 		{
 			sum = sum + atoi(argv[i]);
-			i++;
 		}
 	}
 
