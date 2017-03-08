@@ -18,13 +18,14 @@ char *str_concat(char *s1, char *s2)
 
 	if (s1 == '\0')
 		len1 = 0;
+	else
+		len1 = _strlen(s1);
+
 	if (s2 == '\0')
 		len2 = 0;
-	if (s1 == '\0' && s2 == '\0')
-		return (NULL);
+	else
+		len2 = _strlen(s2);
 
-	len1 = _strlen(s1);
-	len2 = _strlen(s2);
 	len = len1 + len2;
 
 	str = malloc((len * sizeof(char)) + 1);
