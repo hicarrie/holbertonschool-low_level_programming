@@ -13,5 +13,6 @@ int sum_len(char **av);
 int total_len(int ac, char **av);
 void copy_str(char *a, char *b);
 void copy_strs(char **av, char *s);
+char **strtow(char *str);
 
 #endif /* HOLBERTON_H */
