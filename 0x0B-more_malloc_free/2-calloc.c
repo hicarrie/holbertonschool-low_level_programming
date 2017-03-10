@@ -21,6 +21,9 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 
 	array = malloc(mem);
 
+	if (array == NULL)
+		return (NULL);
+
 	for (i = 0; i < mem; i++)
 		array[i] = 0;
 
