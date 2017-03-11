@@ -15,6 +15,9 @@ char *argstostr(int ac, char **av)
 
 	bytes = total_len(ac, av);
 
+	if (av == NULL)
+		return (NULL);
+
 	str = malloc(bytes);
 
 	if (str == NULL)
@@ -58,7 +61,7 @@ int total_len(int ac, char **av)
 
 /**
  * sum_len - calculates length of all strings
- * @s: strings to be evaluated
+ * @av: strings to be evaluated
  * Return: string length
  */
 int sum_len(char **av)
