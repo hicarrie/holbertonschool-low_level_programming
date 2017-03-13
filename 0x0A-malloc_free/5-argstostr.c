@@ -15,7 +15,7 @@ char *argstostr(int ac, char **av)
 
 	bytes = total_len(ac, av);
 
-	if (av == NULL)
+	if (*av == NULL)
 		return (NULL);
 
 	str = malloc(bytes);
