@@ -21,28 +21,36 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (dog == NULL)
 		return (NULL);
 
-	if (dog->name == NULL)
-	        dog->name = "(nil)";
-
-	if (dog->owner == NULL)
-	        dog->owner = "(nil)";
-
 	len_name = _strlen(name);
 	len_owner = _strlen(owner);
 
-	cname = malloc(sizeof(char) * (len_name + 1));
-	if (cname == NULL)
-		return (NULL);
-	cowner = malloc(sizeof(char) * (len_owner + 1));
-	if (cowner == NULL)
-		return (NULL);
+	if (name != NULL)
+	{
+		cname = malloc(sizeof(char) * (len_name + 1));
+		if (cname == NULL)
+		{
+			free(dog);
+			return (NULL);
+		}
+	}
+
+	if (owner != NULL)
+	{
+		cowner = malloc(sizeof(char) * (len_owner + 1));
+		if (cowner == NULL)
+		{
+			free(name);
+			free(dog);
+			return (NULL);
+		}
+	}
 
 	_strcpy(cname, name);
 	_strcpy(cowner, owner);
 
-	dog->name = name;
+	dog->cname = name;
 	dog->age = age;
-	dog->owner = owner;
+	dog->cowner = owner;
 
 	return (dog);
 }
