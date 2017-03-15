@@ -5,6 +5,7 @@
 /**
  * array_iterator - executes a function given as a parameter on each element
  * of an array
+ * @array: pointer to array
  * @size: size of array
  * @action: pointer of the function to use
  * Return: void
