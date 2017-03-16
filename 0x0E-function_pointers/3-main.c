@@ -18,8 +18,8 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 
-        a = atoi(argv[1]);
-        b = atoi(argv[3]);
+	a = atoi(argv[1]);
+	b = atoi(argv[3]);
 
 	if (get_op_func(argv[2]) == NULL)
 	{
