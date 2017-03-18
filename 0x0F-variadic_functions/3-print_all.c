@@ -10,10 +10,11 @@
  */
 void print_all(const char * const format, ...)
 {
-	unsigned int i, j;
 	va_list arg;
+	unsigned int i, j;
+	char *sep;
 
-        print_t print[] = {
+	print_t print[] = {
 		{"c", print_c},
 		{"i", print_i},
 		{"f", print_f},
@@ -29,10 +30,11 @@ void print_all(const char * const format, ...)
 		j = 0;
 		while (print[j].p != NULL)
 		{
+			sep = ", ";
 			if (format[i] == print[j].print[0])
 			{
 				print[j].p(arg);
-				printf(", ");
+				printf("%s", sep);
 			}
 			j++;
 		}
@@ -45,7 +47,7 @@ void print_all(const char * const format, ...)
 
 /**
  * print_c - prints char
- * @va_arg: argument to print
+ * @arg: argument to print
  * Return: void
  */
 void print_c(va_list arg)
@@ -55,7 +57,7 @@ void print_c(va_list arg)
 
 /**
  * print_i - prints integer
- * @va_arg: argument to print
+ * @arg: argument to print
  * Return: void
  */
 void print_i(va_list arg)
@@ -65,7 +67,7 @@ void print_i(va_list arg)
 
 /**
  * print_f - prints float
- * @va_arg: argument to print
+ * @arg: argument to print
  * Return: void
  */
 void print_f(va_list arg)
@@ -75,7 +77,7 @@ void print_f(va_list arg)
 
 /**
  * print_s - prints string
- * @va_arg: argument to print
+ * @arg: argument to print
  * Return: void
  */
 void print_s(va_list arg)
