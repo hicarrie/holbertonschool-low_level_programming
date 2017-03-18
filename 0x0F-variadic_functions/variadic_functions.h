@@ -10,7 +10,7 @@
 typedef struct print
 {
 	char *print;
-	void (*p)();
+	void (*p)(va_list arg);
 } print_t;
 
 int _putchar(char c);
