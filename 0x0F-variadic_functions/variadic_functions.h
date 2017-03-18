@@ -3,9 +3,9 @@
 #include <stdarg.h>
 
 /**
- * struct flag - Struct flag
- * @flag: struct flag
- * @f: The function associated
+ * struct print - Struct print
+ * @print: struct print
+ * @p: The function associated
  */
 typedef struct print
 {
