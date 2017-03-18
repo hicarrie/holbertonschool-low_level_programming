@@ -12,7 +12,7 @@ void print_all(const char * const format, ...)
 {
 	va_list arg;
 	unsigned int i, j;
-	char *sep;
+	unsigned int f_len = 0;
 
 	print_t print[] = {
 		{"c", print_c},
@@ -22,6 +22,9 @@ void print_all(const char * const format, ...)
 		{NULL, NULL}
 	};
 
+	for (i = 0; format[i] != '\0'; i++)
+		f_len++;
+
 	va_start(arg, format);
 
 	i = 0;
@@ -30,11 +33,13 @@ void print_all(const char * const format, ...)
 		j = 0;
 		while (print[j].p != NULL)
 		{
-			sep = ", ";
 			if (format[i] == print[j].print[0])
 			{
 				print[j].p(arg);
-				printf("%s", sep);
+				if (j == (f_len - 1))
+					;
+				else
+					printf(", ");
 			}
 			j++;
 		}
