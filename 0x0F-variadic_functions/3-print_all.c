@@ -12,6 +12,7 @@ void print_all(const char * const format, ...)
 {
 	va_list arg;
 	unsigned int i, j;
+	char *sep;
 
 	print_t print[] = {
 		{"c", print_c},
@@ -24,6 +25,7 @@ void print_all(const char * const format, ...)
 	va_start(arg, format);
 
 	i = 0;
+	sep = "";
 	while (format != NULL && format[i] != '\0')
 	{
 		j = 0;
@@ -31,8 +33,8 @@ void print_all(const char * const format, ...)
 		{
 			if (format[i] == print[j].print[0])
 			{
-				print[j].p(arg);
-				printf(", ");
+				sep = ", ";
+				print[j].p(arg, sep);
 			}
 			j++;
 		}
@@ -48,9 +50,9 @@ void print_all(const char * const format, ...)
  * @arg: argument to print
  * Return: void
  */
-void print_c(va_list arg)
+void print_c(va_list arg, char *sep)
 {
-	printf("%c", va_arg(arg, int));
+	printf("%c%s", va_arg(arg, int), sep);
 }
 
 /**
@@ -58,9 +60,9 @@ void print_c(va_list arg)
  * @arg: argument to print
  * Return: void
  */
-void print_i(va_list arg)
+void print_i(va_list arg, char *sep)
 {
-	printf("%d", va_arg(arg, int));
+	printf("%d%s", va_arg(arg, int), sep);
 }
 
 /**
@@ -68,9 +70,9 @@ void print_i(va_list arg)
  * @arg: argument to print
  * Return: void
  */
-void print_f(va_list arg)
+void print_f(va_list arg, char *sep)
 {
-	printf("%f", va_arg(arg, double));
+	printf("%f%s", va_arg(arg, double), sep);
 }
 
 /**
@@ -78,10 +80,10 @@ void print_f(va_list arg)
  * @arg: argument to print
  * Return: void
  */
-void print_s(va_list arg)
+void print_s(va_list arg, char *sep)
 {
 	if (arg != NULL)
-		printf("%s", va_arg(arg, char *));
+		printf("%s%s", va_arg(arg, char *), sep);
 	else
-		printf("(nil)");
+		printf("(nil)%s", sep);
 }
