@@ -12,7 +12,6 @@ void print_all(const char * const format, ...)
 {
 	va_list arg;
 	unsigned int i, j;
-	unsigned int f_len = 0;
 
 	print_t print[] = {
 		{"c", print_c},
@@ -21,9 +20,6 @@ void print_all(const char * const format, ...)
 		{"s", print_s},
 		{NULL, NULL}
 	};
-
-	for (i = 0; format[i] != '\0'; i++)
-		f_len++;
 
 	va_start(arg, format);
 
@@ -36,10 +32,7 @@ void print_all(const char * const format, ...)
 			if (format[i] == print[j].print[0])
 			{
 				print[j].p(arg);
-				if (j == (f_len - 1))
-					;
-				else
-					printf(", ");
+				printf(", ");
 			}
 			j++;
 		}
@@ -91,5 +84,4 @@ void print_s(va_list arg)
 		printf("%s", va_arg(arg, char *));
 	else
 		printf("(nil)");
-
 }
