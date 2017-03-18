@@ -10,7 +10,7 @@
 typedef struct print
 {
 	char *print;
-	void (*p)(va_list arg);
+	void (*p)(va_list arg, char *sep);
 } print_t;
 
 int _putchar(char c);
@@ -18,9 +18,9 @@ int sum_them_all(const unsigned int n, ...);
 void print_numbers(const char *separator, const unsigned int n, ...);
 void print_strings(const char *separator, const unsigned int n, ...);
 void print_all(const char * const format, ...);
-void print_c(va_list arg);
-void print_i(va_list arg);
-void print_f(va_list arg);
-void print_s(va_list arg);
+void print_c(va_list arg, char *sep);
+void print_i(va_list arg, char *sep);
+void print_f(va_list arg, char *sep);
+void print_s(va_list arg, char *sep);
 
 #endif /* VARIADIC_FUNCTIONS_H */
