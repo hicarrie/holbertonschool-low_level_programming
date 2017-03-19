@@ -31,9 +31,9 @@ void print_all(const char * const format, ...)
 		j = 0;
 		while (print[j].p != NULL)
 		{
+			sep = ", ";
 			if (format[i] == print[j].print[0])
 			{
-				sep = ", ";
 				print[j].p(arg, sep);
 			}
 			j++;
@@ -82,8 +82,11 @@ void print_f(va_list arg, char *sep)
  */
 void print_s(va_list arg, char *sep)
 {
-	if (arg != NULL)
-		printf("%s%s", va_arg(arg, char *), sep);
-	else
-		printf("(nil)%s", sep);
+	char *s = "(nil)";
+	if (arg == NULL)
+	{
+		printf("%s%s", s, sep);
+		return;
+	}
+	printf("%s%s", va_arg(arg, char*), sep);
 }
