@@ -48,6 +48,7 @@ void print_all(const char * const format, ...)
 /**
  * print_c - prints char
  * @arg: argument to print
+ * @sep: separator
  * Return: void
  */
 void print_c(va_list arg, char *sep)
@@ -58,6 +59,7 @@ void print_c(va_list arg, char *sep)
 /**
  * print_i - prints integer
  * @arg: argument to print
+ * @sep: separator
  * Return: void
  */
 void print_i(va_list arg, char *sep)
@@ -68,6 +70,7 @@ void print_i(va_list arg, char *sep)
 /**
  * print_f - prints float
  * @arg: argument to print
+ * @sep: separator
  * Return: void
  */
 void print_f(va_list arg, char *sep)
@@ -78,11 +81,13 @@ void print_f(va_list arg, char *sep)
 /**
  * print_s - prints string
  * @arg: argument to print
+ * @sep: separator
  * Return: void
  */
 void print_s(va_list arg, char *sep)
 {
 	char *s = "(nil)";
+
 	if (arg == NULL)
 	{
 		printf("%s%s", s, sep);
