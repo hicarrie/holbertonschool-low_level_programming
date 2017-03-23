@@ -12,7 +12,7 @@ size_t print_list(const list_t *h)
 	unsigned int n; /* number of nodes */
 
 	if (h == NULL)
-		return (1);
+		return (NULL);
 
 	n = 0;
 	while (current != NULL)
