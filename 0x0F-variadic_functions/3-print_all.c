@@ -31,10 +31,11 @@ void print_all(const char * const format, ...)
 		j = 0;
 		while (print[j].p != NULL)
 		{
-			sep = ", ";
 			if (format[i] == print[j].print[0])
 			{
-				print[j].p(arg, sep);
+				printf("%s", sep);
+				print[j].p(arg);
+				sep = ", ";
 			}
 			j++;
 		}
@@ -48,50 +49,46 @@ void print_all(const char * const format, ...)
 /**
  * print_c - prints char
  * @arg: argument to print
- * @sep: separator
  * Return: void
  */
-void print_c(va_list arg, char *sep)
+void print_c(va_list arg)
 {
-	printf("%c%s", va_arg(arg, int), sep);
+	printf("%c", va_arg(arg, int));
 }
 
 /**
  * print_i - prints integer
  * @arg: argument to print
- * @sep: separator
  * Return: void
  */
-void print_i(va_list arg, char *sep)
+void print_i(va_list arg)
 {
-	printf("%d%s", va_arg(arg, int), sep);
+	printf("%d", va_arg(arg, int));
 }
 
 /**
  * print_f - prints float
  * @arg: argument to print
- * @sep: separator
  * Return: void
  */
-void print_f(va_list arg, char *sep)
+void print_f(va_list arg)
 {
-	printf("%f%s", va_arg(arg, double), sep);
+	printf("%f", va_arg(arg, double));
 }
 
 /**
  * print_s - prints string
  * @arg: argument to print
- * @sep: separator
  * Return: void
  */
-void print_s(va_list arg, char *sep)
+void print_s(va_list arg)
 {
-	char *s = "(nil)";
+	char *s;
 
-	if (arg == NULL)
-	{
-		printf("%s%s", s, sep);
-		return;
-	}
-	printf("%s%s", va_arg(arg, char*), sep);
+	s = va_arg(arg, char *);
+
+	if (s == NULL)
+		s = "(nil)";
+
+	printf("%s", s);
 }
