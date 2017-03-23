@@ -12,7 +12,7 @@ size_t list_len(const list_t *h)
 	unsigned int n; /* counter for number of elements */
 
 	if (current == NULL)
-		return (1);
+		return (0);
 
 	n = 0;
 	while (current != NULL)
