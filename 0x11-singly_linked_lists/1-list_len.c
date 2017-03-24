@@ -11,9 +11,6 @@ size_t list_len(const list_t *h)
 	const list_t *current = h;
 	unsigned int n; /* counter for number of elements */
 
-	if (current == NULL)
-		return (0);
-
 	n = 0;
 	while (current != NULL)
 	{
