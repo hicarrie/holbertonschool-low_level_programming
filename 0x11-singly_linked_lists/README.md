@@ -1,7 +1,7 @@
 # 0x11 - Singly Linked Lists
 ## Project Requirements
 - Formatted with Betty style standards
--Compiled with gcc 4.8.4 (C90) using the flags `-Wall` `-Werror` `-Wextra` and `-pedantic`
+- Compiled with gcc 4.8.4 (C90) using the flags `-Wall` `-Werror` `-Wextra` and `-pedantic`
 - No global variables
 - No more than 5 functions per file
 - Allowed C standard library functions are `malloc`, `free`, and `exit`
