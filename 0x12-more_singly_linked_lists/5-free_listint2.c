@@ -3,7 +3,7 @@
 #include "lists.h"
 
 /**
- * free_listint - frees a listint_t list and sets head to NULL
+ * free_listint2 - frees a listint_t list and sets head to NULL
  * @head: pointer to pointer to list to be freed
  * Return: void
  */
@@ -18,7 +18,5 @@ void free_listint2(listint_t **head)
 		free(current);
 	}
 
-	free(*head);
-
-	*head = NULL;
+	head = NULL;
 }
