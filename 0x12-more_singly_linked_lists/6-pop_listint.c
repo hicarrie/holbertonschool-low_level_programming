@@ -13,12 +13,12 @@ int pop_listint(listint_t **head)
 	listint_t *current;
 	int temp;
 
-	if (head == NULL)
+	if (*head == NULL || (*head)->next == NULL)
 		return (0);
 
-	temp = (*head)->n;
-	current = (*head)->next;
+	temp = (*head)->n; /* head node's data */
+	current = (*head)->next; /* save next node's address */
 	free(*head);
-	*head = current;
+	*head = current; /* reassign next node to head */
 	return (temp);
 }
