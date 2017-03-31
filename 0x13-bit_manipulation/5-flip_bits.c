@@ -12,7 +12,7 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 	unsigned int counter;
 	int size;
 
-	size = sizeof(unsigned long int) * 8 - 1;
+	size = sizeof(unsigned long int) * 8;
 
 	counter = 0;
 	while (size != 0)
