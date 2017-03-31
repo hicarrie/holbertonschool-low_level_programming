@@ -11,6 +11,9 @@ int get_bit(unsigned long int n, unsigned int index)
 {
 	unsigned int result;
 
+	if (index > sizeof(n) * 8 - 1)
+		return (-1); /* checks if index is larger than # of positions */
+
 	/* right shifting by index moves specified bit to rightmost position */
 	result = (n >> index) & 1;
 
