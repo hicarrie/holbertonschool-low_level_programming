@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include <stdlib.h>
 #include "holberton.h"
 
@@ -32,5 +31,4 @@ void print_binary(unsigned long int n)
 		else if (zero == 1)
 			_putchar('0');
 	}
-	printf("\n%i\n", size);
 }
