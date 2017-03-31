@@ -7,21 +7,19 @@
  */
 int get_endianness(void)
 {
-	int compare; /* compares against mask to determine endianness */
 	unsigned long int size; /* number of bits for unsigned long int */
+	int big; /* big endian bit to compare */
+	int little; /* little endian bit to compare */
 	int endian;
 
-	compare = 1;
 	size = sizeof(unsigned long int) * 8 - 1;
+	big = 1 >> size;
+	little = 1;
 
-	if ((compare & 1) == 1)
+	if ((big & 1) == 1)
+		endian = 0;
+	else if ((little & 1) == 1)
 		endian = 1;
-	else
-	{
-		compare = compare >> size;
-		if ((compare & 1) == 1)
-			endian = 0;
-	}
 
 	return (endian);
 }
