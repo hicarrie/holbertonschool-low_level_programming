@@ -17,7 +17,6 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	int fd;
 	char buffer[1024];
 	int bytes; /* number of bytes read by read syscall */
-	int putchar_ret; /* return value of _putchar */
 	int i;
 
 	if (filename == NULL)
@@ -40,9 +39,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	i = 0;
 	while (buffer[i] != '\0')
 	{
-		putchar_ret = _putchar(buffer[i]);
-		if (putchar_ret == -1)
-			return (0);
+	        _putchar(buffer[i]);
 		i++;
 	}
 
