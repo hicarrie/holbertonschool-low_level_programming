@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
 		exit(exit_error(98, argv[1], 0));
 	file_from = argv[1], file_to = argv[2];
 	if (file_from == '\0')
-		file_from == "";
+		file_from = "";
 	fd_from = open(file_from, O_RDONLY);
 	if (fd_from == -1)
 		exit(exit_error(99, file_from, fd_from));
