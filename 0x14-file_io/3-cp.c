@@ -87,7 +87,7 @@ int exit_error(int num, char *str, int fd)
 		break;
 
 	case 99:
-		dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", str);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", str);
 		status = 99;
 		break;
 
