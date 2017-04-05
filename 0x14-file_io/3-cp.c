@@ -39,7 +39,10 @@ int main(int argc, char *argv[])
 	{
 		write_ret = write(fd_to, buffer, read_ret);
 		if (write_ret == -1)
+		{
+			free(buffer);
 			exit(exit_error(99, file_to, fd_to));
+		}
 		read_ret = read(fd_from, buffer, BUFLEN);
 	}
 	free(buffer);
