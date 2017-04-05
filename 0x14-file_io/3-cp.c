@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
 {
 	char *file_from, *file_to, *buffer;
 	int fd_to, fd_from = 0;
-	int counter, read_ret, write_ret, close_from_ret, close_to_ret;
+	int read_ret, write_ret, close_from_ret, close_to_ret;
 
 	if (argc != 3)
 		exit(exit_error(97, NULL, 0));
@@ -27,15 +27,12 @@ int main(int argc, char *argv[])
 	file_from = argv[1], file_to = argv[2];
 
 	fd_from = open(file_from, O_RDONLY);
-	if (argv[2] == NULL || fd_from == -1)
+	if (fd_from == -1)
 		exit(exit_error(99, file_from, fd_from));
 
 	fd_to = open(file_to, O_CREAT | O_TRUNC | O_WRONLY, 0664);
 	if (fd_to == -1)
 		exit(exit_error(99, file_to, fd_to));
-
-	for (counter = 0; file_from[counter] != '\0'; counter++)
-		;
 
 	buffer = malloc(sizeof(char) * BUFLEN);
 	if (buffer == NULL)
