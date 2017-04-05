@@ -33,9 +33,8 @@ int append_text_to_file(const char *filename, char *text_content)
 		return (1);
 	}
 
-	for (counter = 0; text_content != '\0'; counter++)
+	for (counter = 0; text_content[counter] != '\0'; counter++)
 		;
-
 	if (counter == 0)
 	{
 		close(fd);
@@ -52,6 +51,5 @@ int append_text_to_file(const char *filename, char *text_content)
 	close_ret = close(fd);
 	if (close_ret == -1)
 		return (-1);
-
 	return (1);
 }
