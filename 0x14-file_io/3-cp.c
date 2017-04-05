@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
 	if (fd_from == -1)
 		exit(exit_error(98, file_from, fd_from));
 
-	fd_to = open(file_to, O_CREAT | O_TRUNC | O_WRONLY, 0664);
+	fd_to = open(file_to, O_CREAT | O_TRUNC | O_WRONLY, 00664);
 	if (fd_to == -1)
 		exit(exit_error(99, file_to, fd_to));
 
