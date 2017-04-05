@@ -15,6 +15,7 @@ int append_text_to_file(const char *filename, char *text_content)
 	int fd;
 	int counter; /* number of bytes in text_content */
 	int write_ret; /* return status of write syscall */
+	int close_ret; /* return status of close syscall */
 
 	if (filename == NULL)
 		return (-1);
@@ -29,11 +30,16 @@ int append_text_to_file(const char *filename, char *text_content)
 	for (counter = 0; text_content != '\0'; counter++)
 		;
 
+	if (counter == 0)
+		return (1);
+
 	write_ret = write(fd, text_content, counter);
 	if (write_ret == -1)
 		return (-1);
 
-	close(fd);
+	close_ret = close(fd);
+	if (close_ret == -1)
+		return (-1);
 
 	return (1);
 }
