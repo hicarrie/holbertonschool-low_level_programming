@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
 {
 	char *file_from, *file_to, *buffer;
 	int fd_to, fd_from = 0;
-	int counter, read_ret, write_ret, close_to_ret;
+	int counter, read_ret, write_ret, close_from_ret, close_to_ret;
 
 	if (argc != 3)
 		exit(exit_error(97, NULL, 0));
