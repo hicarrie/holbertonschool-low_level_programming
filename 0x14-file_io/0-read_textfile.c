@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include <unistd.h>
 #include <sys/types.h>
 #include <sys/stat.h>
@@ -15,33 +16,27 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int fd;
-	char buffer[1024];
+	char *buffer;
 	int bytes; /* number of bytes read by read syscall */
-	int i;
 
 	if (filename == NULL || letters == 0)
 		return (0);
 
 	fd = open(filename, O_RDONLY);
-
 	if (fd == -1)
 		return (0);
 
-	bytes = read(fd, buffer, letters);
+	buffer = malloc(sizeof(char) * letters);
 
+	bytes = read(fd, buffer, letters);
 	if (bytes == -1)
 		return (0);
 
-	buffer[bytes] = '\0';
+	write(STDOUT_FILENO, buffer, bytes);
 
 	close(fd);
 
-	i = 0;
-	while (buffer[i] != '\0')
-	{
-		_putchar(buffer[i]);
-		i++;
-	}
+	free(buffer);
 
 	return (bytes);
 }
