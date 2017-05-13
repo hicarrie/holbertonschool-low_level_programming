@@ -1,4 +1,4 @@
-# 0x16. C - Doubly linked lists
+# 0x17. C - Dynamic libraries
 ## Project Requirements
 - Formatted with Betty style standards
 - Compiled with gcc 4.8.4 (C90) using the flags `-Wall` `-Werror` `-Wextra` and `-pedantic`
