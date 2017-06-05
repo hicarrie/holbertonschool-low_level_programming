@@ -12,7 +12,7 @@ void hash_table_print(const hash_table_t *ht)
 	unsigned int count;
 	unsigned int i;
 
-	if (ht == NULL)
+	if (ht == NULL || ht->size == 0)
 		return;
 
 	i = 0;
@@ -27,14 +27,14 @@ void hash_table_print(const hash_table_t *ht)
 	printf("{");
 
 	i = 0;
-	count = 0;
+	count = 1;
 	while (i < ht->size)
 	{
 		current = ht->array[i];
 		while (current != NULL)
 		{
 			printf("'%s': '%s'", current->key, current->value);
-			if (count < num_elements - 1)
+			if (count < num_elements)
 				printf(", ");
 			current = current->next;
 			count++;
