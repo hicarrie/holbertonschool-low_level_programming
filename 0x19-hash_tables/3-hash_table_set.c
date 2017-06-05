@@ -11,18 +11,20 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	hash_node_t *node;
 	unsigned long int index;
-	char *key_copy = strdup(key);
-	char *value_copy = strdup(value);
 
-	if (key == NULL)
+	if (key == NULL || strlen(key) == 0)
 		return (EXIT_FAILURE);
 
-	index = key_index(???);
+	index = key_index((const unsigned char *)key, ht->size);
 
-	node = ht->array[index];
+	node = malloc(sizeof(hash_node_t));
+	if (node == NULL)
+		return (EXIT_FAILURE);
 
-	node->key = key_copy;
-	node->value = value_copy;
+	node->key = strdup(key);
+	node->value = strdup(value);
+	node->next = NULL;
+	ht->array[index] = node;
 
 	return (EXIT_SUCCESS);
 }
