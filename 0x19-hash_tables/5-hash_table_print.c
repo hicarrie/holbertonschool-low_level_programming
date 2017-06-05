@@ -44,6 +44,7 @@ void hash_table_print(const hash_table_t *ht)
 		}
 		i++;
 	}
-
-	printf("}\n");
+	if (count < 1)
+		printf("}");
+	printf("\n");
 }
