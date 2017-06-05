@@ -13,18 +13,18 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	unsigned long int index;
 
 	if (ht == NULL || key == NULL || value == NULL || strlen(key) == 0)
-		return (EXIT_FAILURE);
+		return (0);
 
 	index = key_index((const unsigned char *)key, ht->size);
 
 	node = malloc(sizeof(hash_node_t));
 	if (node == NULL)
-		return (EXIT_FAILURE);
+		return (0);
 
 	node->key = strdup(key);
 	node->value = strdup(value);
 	node->next = NULL;
 	ht->array[index] = node;
 
-	return (EXIT_SUCCESS);
+	return (1);
 }
