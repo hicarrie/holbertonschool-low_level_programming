@@ -12,10 +12,10 @@ void hash_table_delete(hash_table_t *ht)
 	unsigned int i;
 
 	if (ht == NULL)
-	        return;
+		return;
 
 	i = 0;
-	while(i < ht->size)
+	while (i < ht->size)
 	{
 		head = ht->array[i];
 		if (head != NULL && head->next == NULL)
@@ -26,7 +26,7 @@ void hash_table_delete(hash_table_t *ht)
 		}
 		else if (head != NULL && head->next != NULL)
 		{
-			while (head->next != NULL)
+			while (head != NULL)
 			{
 				temp = head->next;
 				free(head->key);
