@@ -12,7 +12,7 @@ void hash_table_print(const hash_table_t *ht)
 	unsigned int count;
 	unsigned int i;
 
-	if (ht == NULL || ht->size == 0)
+	if (ht == NULL)
 		return;
 
 	i = 0;
@@ -23,6 +23,9 @@ void hash_table_print(const hash_table_t *ht)
 			num_elements++;
 		i++;
 	}
+
+	if (num_elements == 0)
+		return;
 
 	printf("{");
 
