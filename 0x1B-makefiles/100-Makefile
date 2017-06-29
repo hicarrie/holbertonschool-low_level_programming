@@ -4,6 +4,10 @@ OBJ = $(SRC:.c=.o)
 NAME = holberton
 CFLAGS = -Wall -Werror -Wextra -pedantic
 
+main.o: m.h
+holberton.o: m.h
+
+.PHONY: all
 all: $(SRC) $(NAME)
 
 $(NAME): $(OBJ)
