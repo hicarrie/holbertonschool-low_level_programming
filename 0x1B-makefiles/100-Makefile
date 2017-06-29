@@ -9,12 +9,16 @@ all: $(SRC) $(NAME)
 $(NAME): $(OBJ)
 	$(CC) $(OBJ) -c -o $@
 
+.PHONY: clean
 clean:
 	$(RM) *~ $(NAME)
 
+.PHONY: oclean
 oclean:
 	$(RM) $(OBJ)
 
+.PHONY: fclean
 fclean: clean oclean
 
+.PHONY: re
 re: oclean all
