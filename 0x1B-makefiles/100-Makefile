@@ -5,10 +5,10 @@ NAME = holberton
 CFLAGS = -Wall -Werror -Wextra -pedantic
 
 .PHONY: all
-all: $(SRC) $(NAME)
+all: $(SRC) $(NAME) m.h
 
 $(NAME): $(OBJ)
-	$(CC) $(OBJ) -c -o $@
+	$(CC) $(OBJ) -o $@
 
 .PHONY: clean
 clean:
