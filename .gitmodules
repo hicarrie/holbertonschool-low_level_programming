@@ -4,3 +4,6 @@
 [submodule "0x1A-sorting_algorithms"]
 	path = 0x1A-sorting_algorithms
 	url = https://github.com/yeungegs/holbertonschool_big-o
+[submodule "0x1C-binary_trees"]
+	path = 0x1C-binary_trees
+	url = https://github.com/yeungegs/holbertonschool-binary_trees
