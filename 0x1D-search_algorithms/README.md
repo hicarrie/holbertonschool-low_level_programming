@@ -1,4 +1,4 @@
-# 0x19. C - Hash tables
+# 0x1D. C - Search Algorithms
 ## Project Requirements
 - Formatted with Betty style standards
 - Compiled with gcc 4.8.4 (C90) using the flags `-Wall` `-Werror` `-Wextra` and `-pedantic`
