@@ -40,23 +40,23 @@ int binary_search(int *array, size_t size, int value)
 
 /**
  * print_array - prints an array of integers
- *
  * @array: the array to be printed
+ * @position: index to start printing the array
  * @size: number of elements in @array
  */
 void print_array(int *array, size_t position, size_t size)
 {
-    size_t i;
+	size_t i;
 
-    printf("Searching in array: ");
+	printf("Searching in array: ");
 
-    i = position;
-    while (array && i < size)
-    {
-	    if (i > position)
-            printf(", ");
-        printf("%d", array[i]);
-        ++i;
-    }
-    printf("\n");
+	i = position;
+	while (array && i < size)
+	{
+		if (i > position)
+			printf(", ");
+		printf("%d", array[i]);
+		++i;
+	}
+	printf("\n");
 }
