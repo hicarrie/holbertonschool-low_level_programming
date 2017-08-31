@@ -36,5 +36,9 @@ int **allocate_map(int n, int m)
 }
 ```
 
+**100-jump.c:** a function that searches for a value in a sorted array of integers using the Jump search algorithm
+
+**101-O:** What is the time complexity of a jump algorithm in an array of size n, using step = sqrt(n)?
+
 ## Author
 *Carrie Ybay* - [Twitter](http://twitter.com/hicarrie_)
