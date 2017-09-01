@@ -28,3 +28,4 @@
 - 0x1A - Sorting Algorithms
 - 0x1B - Makefiles
 - 0x1C - Binary Trees
+- 0x1D - Search Algorithms
